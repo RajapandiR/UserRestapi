@@ -123,7 +123,7 @@ class Controller {
                     res.redirect('/edit-user/'+id);                    
                 }
                 else{
-                    const msg = "Deleted Success Full"
+                    const msg = "Deleted Success Full";
                     res.redirect('/?msg='+msg)
                 }
                    

@@ -48,4 +48,5 @@ router.route('/user')
 
 router.route('/user/:id')
     .delete(UserController.deleteuser)
+
 export default router;
