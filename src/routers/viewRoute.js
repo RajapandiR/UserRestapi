@@ -1,5 +1,7 @@
-import UserController from '../controllers/user_controller';
+import UserController from "../controllers/views/user_controller";
+
 import express from 'express';
+
 import multer from 'multer';
 import path from 'path';
 
@@ -41,11 +43,13 @@ const userUpload = multer({storage: userStorage, fileFilter: function (req, file
 }});
 
 
-router.route('/user')
-    .get(UserController.getuser)
-    .post(userUpload.single('image'),UserController.postuser)
-    .put(userUpload.single('image'),UserController.putuser)
+router.route('/').get(UserController.getUserViewAll);
+router.route('/add-user').get(UserController.getAddUserPage);
+router.route('/add-user').post(userUpload.single('image'),UserController.getAddUser);
+router.route('/edit-user').get(UserController.getEditUserPage);
+router.route('/edit-user/:id').get(UserController.getEditUserPage);
+router.route('/edit-user/:id').post(userUpload.single('image'),UserController.getEditUser);
+router.route('/:id').get(UserController.getDeleteUserPage);
 
-router.route('/user/:id')
-    .delete(UserController.deleteuser)
+
 export default router;

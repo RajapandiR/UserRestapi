@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="description" content="Isite info - Ems">
+    <!-- Android  -->
+    <meta name="theme-color" content="blue">
+    <meta name="background-color" content="white">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-title" content="Application Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="../../images/icons-192.png">
+    <!-- Tap highlighting  -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- UC Mobile Browser  -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+
+    <!-- Disable night mode for this page  -->
+    <meta name="nightmode" content="enable/disable">
+
+    <!-- Fitscreen  -->
+    <meta name="viewport" content="uc-fitscreen=yes"/>
+
+    <!-- Layout mode -->
+    <meta name="layoutmode" content="fitscreen/standard">
+
+    <!-- imagemode - show image even in text only mode  -->
+    <meta name="imagemode" content="force">
+
+    <!-- Orientation  -->
+    <meta name="screen-orientation" content="portrait">
+    <title><%= result.title %></title>
+
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,400,600,700|Open+Sans:300,400,600,700|Roboto+Slab:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet" defer>
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700&display=swap" rel="stylesheet" defer>
+    <link href="//fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed&display=swap" rel="stylesheet" defer>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+<script	src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">  -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" async>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" async>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>        
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/lang/en-gb.js"></script>                
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css.map">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"> -->
+<link rel="stylesheet" href="../../style/style1.css" async>
+
+</head>
+
+<body>
+
+<header>
+    <div class="">
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+                <a href="#" class="navbar-brand">
+                    <img src="../../images/logo.png" height="50"  alt="Isite Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                    <!--     <ul> -->
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Roles</a>
+                                <div class="dropdown-menu">
+                                    <a href="/userrole-add" class="dropdown-item">Add Roles</a>
+                                    <a href="/userrole-all" class="dropdown-item">View Roles</a>
+                                </div>                            
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Users</a>
+                                <div class="dropdown-menu">
+                                      <a href="/employees-quick" class="dropdown-item">Quick User Create</a>
+                                    <a href="/employees-registration" class="dropdown-item">Add Users</a>
+                                    <!-- <a href="/employees-import" class="dropdown-item">Import Users</a> -->
+                                    <a href="/employees-all" class="dropdown-item">View Users</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Status Report</a>
+                                <div class="dropdown-menu">
+                                    <a href="/status-reports-view-all" class="dropdown-item">View all</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Clients</a>
+                                <div class="dropdown-menu">
+                                    <a href="/client-add" class="dropdown-item">Add Clients</a>
+                                    <a href="/client-all" class="dropdown-item">View Clients</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vendors</a>
+                                <div class="dropdown-menu">
+                                    <a href="/vendor-add" class="dropdown-item">Add Vendors</a>
+                                    <a href="/vendor-all" class="dropdown-item">View Vendors</a>
+                                </div>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Job titles</a>
+                                <div class="dropdown-menu">
+                                    <a href="/jobtitle-add" class="dropdown-item">Add Job Title</a>
+                                    <a href="/jobtitle-all" class="dropdown-item">View Job Titles</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LCA</a>
+                                <div class="dropdown-menu">
+                                    <a href="lca-add" class="dropdown-item">Add New LCA</a>
+                                    <a href="lca-all" class="dropdown-item">View All LCA</a>
+                                </div>
+                            </li>
+                       <!--  </ul> -->
+                    </div>
+                    <div class="navbar-nav ml-auto">              
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!-- <a href="#" class="dropdown-item">View Profile</a> -->
+                            <a href="/changePassword" class="dropdown-item">Change Password</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/logout"class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

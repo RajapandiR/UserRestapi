@@ -4,7 +4,7 @@ class userSchema {
             type : "object",
             properties: {
                 name: {type: 'string'},
-                age: {type: 'number'},
+                age: {type: 'string'},
                 image: {type: 'string'},
             },
             required : ['name']
@@ -17,7 +17,8 @@ class userSchema {
             properties: {
                 _id: {type: 'string'},
                 name: {type: 'string'},
-                age: {type: 'number'},
+                age: {type: 'string'},
+                image: {type: 'string'},
             },
             required : ['_id', 'name']
         };

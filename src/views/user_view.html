@@ -1,0 +1,60 @@
+<%- include('main.html') %>
+<style>
+    .first_content1 {
+    padding: 1em;
+    margin-top: 75px;
+}
+.bg-dark {
+    background-color: #206199 !important;
+}
+</style>
+<body>
+    
+    <div class="first_content1 c">
+        <div class="row">
+            <div class="col-12">
+               <a href="/add-user"><span style="float: right">Add - user</span></a>
+            </div>
+         </div>
+         <% if (result.success && result.success != '') { %>
+            <div class="alert alert-danger" role="alert"><%= result.success %></div>
+            <% } %>
+    <% var users = result.data.data
+    var index = 0;
+     if (users.length >0) { %>
+        <div class="table-responsive pt-3">
+            <table id="tableData" class="table table-striped table-bordered">
+              <thead class="bg-dark text-white">
+                <tr>
+                  <th class="head">S.No</th>
+                  <th class="head">Name</th>
+                  <th class="head">Age</th>
+                  <th class="head">Image</th>
+                  <th class="head">Actions</th>
+                </tr>
+              </thead>
+            <% users.forEach(function(userData) { index++ %>
+                <tr>
+                    <td><%= index %></td>
+                    <td><%= userData.name %></td>
+                    <td><%= userData.age %></td>
+                    <td><% if(userData.image) { %><a href="images/<%- userData.image %>"><img src="images/<%- userData.image %>" alt="<%- userData.image %>" width="50px" height="25px;"/></a><% }else { %> - <% } %></td>
+                    <td> <a  title="Edit" href="/edit-user/<%= userData._id %>" style="padding: 1px 6px;">
+                        <button class="btn btn-success">Edit</button>
+                        </a>&nbsp;
+                        <a  title="Edit" href="/<%= userData._id %>" style="padding: 1px 6px;">
+                            <button class="btn btn-success">Delete</button>
+                        </a>
+                </td>
+                </tr>
+            <% }) %> 
+            </table>
+        </div> 
+    <% } else { %>
+        <div class="alert alert-info" role="alert">
+            No Data Found
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<%- include('main.html')%>
+
+<form action="" method="POST" id="user-edit">
+    <section class="first_content1 c">
+        <div class="row">
+           <div class="col-12">
+              <a href="/"><span style="float: right">View All</span></a>
+           </div>
+        </div>
+
+        <% if (result.error) { %>
+            <div class="alert alert-danger" role="alert"><%= result.error %></div>
+        <% } %>
+        <div class="container">
+            <div class="bg_white">
+                    <div class="row mb-2">
+                        <div class="col-sm-2 col-xs-12">
+                            <label>name</label>
+                        </div>
+                        <div class="col-sm-10 col-xs-12">
+                            <input name="name" id="name" type="text" value="<%= result.UserDatas.name %>" placeholder="Name" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-sm-2 col-xs-12">
+                            <label>Age</label>
+                        </div>
+                        <div class="col-sm-10 col-xs-12">
+                            <input name="age" id="age" type="text" value="<%= result.UserDatas.age %>" placeholder="Age" class="form-control" required>
+                            <input name="_id" id="_id" type="hidden" value="<%= result._id %>">
+                        </div>
+                    </div>
+                        
+                        
+                        <input name="image" id="image" type="file" class="form-control" value="<%= result.UserDatas.image %>" required >
+                        <!-- <input name="apiType" id="apiType" type="hidden" value="render"> -->
+                    <center>
+                        <button type="submit" class="btn btn-success m-3">Update</button>
+                        <input type="reset" name="button"  value="Reset" class="btn btn-danger m-3"/>
+                    </center>
+                 
+        
+            </div>
+        </div>
+    </section>
+</form>
