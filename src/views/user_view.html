@@ -1,19 +1,19 @@
 <%- include('main.html') %>
-<style>
+<!-- <style>
     .first_content1 {
     padding: 1em;
     margin-top: 75px;
 }
 .bg-dark {
     background-color: #206199 !important;
-}
+} -->
 </style>
 <body>
     
     <div class="first_content1 c">
         <div class="row">
             <div class="col-12">
-               <a href="/add-user"><span style="float: right">Add - user</span></a>
+               <a href="/add-user"><button style="float: right" class="btn btn-primary">Add - user</button></a>
             </div>
          </div>
          <% if (result.success && result.success != '') { %>
@@ -33,17 +33,18 @@
                   <th class="head">Actions</th>
                 </tr>
               </thead>
+              
             <% users.forEach(function(userData) { index++ %>
                 <tr>
                     <td><%= index %></td>
                     <td><%= userData.name %></td>
                     <td><%= userData.age %></td>
-                    <td><% if(userData.image) { %><a href="images/<%- userData.image %>"><img src="images/<%- userData.image %>" alt="<%- userData.image %>" width="50px" height="25px;"/></a><% }else { %> - <% } %></td>
+                    <td><a href="images/<%= userData.image %>"><img src="images/<%= userData.image %>" alt="<%= userData.image %>" width="50px" height="25px;"/></a></td>
                     <td> <a  title="Edit" href="/edit-user/<%= userData._id %>" style="padding: 1px 6px;">
                         <button class="btn btn-success">Edit</button>
-                        </a>&nbsp;
+                        </a>
                         <a  title="Edit" href="/<%= userData._id %>" style="padding: 1px 6px;">
-                            <button class="btn btn-success">Delete</button>
+                            <button class="btn btn-danger">Delete</button>
                         </a>
                 </td>
                 </tr>

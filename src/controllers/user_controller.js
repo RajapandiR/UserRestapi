@@ -89,12 +89,10 @@ class UserController{
             }
             if(req.file != undefined && (req.file.filename != undefined && req.file.filename != '')){
                 body.image = req.file.filename;
-                console.log("ssss");
             }
                 
             
             const user = await User.create(body, function(err, result) {
-                console.log("result", result);
                 if(err){
                     console.log("Error", err);
                 }
@@ -127,6 +125,9 @@ class UserController{
             const validator = JsonSchemaValidator.validate(body, UserSchema.editUser())
             if(!validator.valid){
                 throw CreateError(400, JsonSchemaValidator.notValidate(validator.errors))
+            }
+            if(req.file != undefined && (req.file.filename != undefined && req.file.filename != '')){
+                body.image = req.file.filename;
             }
             const _id = body._id;
             const user = await User.updateOne({_id}, body, function(err, result) {

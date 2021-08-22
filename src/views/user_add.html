@@ -1,13 +1,24 @@
 <%- include('main.html')%>
+<!-- <style>
+    .first_content1 {
+    padding: 1em;
+    margin-top: 75px;
+}
+.bg-dark {
+    background-color: #206199 !important;
+} -->
+</style>
 
-<form action="" method="POST" id="add-user">
+<form action="" method="POST" id="add-user" enctype="multipart/form-data">
     <section class="first_content1 c">
         <div class="row">
-           <div class="col-12">
-              <a href="/"><span style="float: right">View All</span></a>
-           </div>
-        </div>
-
+            <div class="col-12">
+               <a href="/"><i class="fa fa-eye" style="font-size:36px;float: right"></i></a>
+            </div>
+         </div>
+        <div class="text-center bg-dark text-white p-1 mb-2 mt-2">
+            <b><h5><%= result.title %></h5></b>
+         </div>
         <% if (result.error) { %>
             <div class="alert alert-danger" role="alert"><%= result.error %></div>
         <% } %>
@@ -47,7 +58,7 @@
                         <!-- <input name="apiType" id="apiType" type="hidden" value="render"> -->
                     <center>
                         <button type="submit" class="btn btn-success m-3">Save</button>
-                        <input type="reset" name="button"  value="Reset" class="btn btn-danger m-3"/>
+                        <button type="reset"  class="btn btn-danger m-3">Reset</button>
                     </center>
                  
         
