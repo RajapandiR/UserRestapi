@@ -116,7 +116,7 @@ class Controller {
 
     static async getDeleteUserPage(req, res){
         try{
-            // const id = req.params.id;
+            const id = req.params.id;
             req.body.apiType = "render";
             await UserController.deleteuser(req, res, function(err, userData) {
                 if(err){
